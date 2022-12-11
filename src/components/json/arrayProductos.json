@@ -1,0 +1,8 @@
+[
+    {"id":1, "name":"Tablero 1", "description":"Tablero de ...", "price":6000, "image":"...", "stock":5},
+    {"id":2, "name":"Tablero 2", "description":"Tablero de ...", "price":8000, "image":"...", "stock":3},
+    {"id":3, "name":"Reloj 1", "description":"Tablero de ...", "price":15000, "image":"...", "stock":2},
+    {"id":4, "name":"Reloj 2", "description":"Tablero de ...", "price":18000, "image":"...", "stock":3},
+    {"id":5, "name":"Libro 1", "description":"Tablero de ...", "price":2000, "image":"...", "stock":8},
+    {"id":6, "name":"Libro 2", "description":"Tablero de ...", "price":1000, "image":"...", "stock":10}
+]
