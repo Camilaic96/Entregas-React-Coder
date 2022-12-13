@@ -26,3 +26,28 @@ a{
   text-decoration: none;
   color: #000;
 }
+
+.botones {
+  border: 2px solid rgb(40, 40, 140);
+  background-color: #fff;
+  padding: 15px;
+  color: #000;
+  box-shadow: inset 0 0 5px rgb(40, 40, 140);
+  text-shadow: 0 0 15px #000;
+  font-weight: bolder;
+}
+
+.boton-subir {
+  z-index: 15;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-image: linear-gradient(to top, rgb(40, 40, 140) 0%, rgb(80, 80, 255) 100%);
+  border-radius: 100%;
+  border: solid 2px #fff;
+  box-shadow: 0 0 15px rgb(40, 40, 140);
+}
+
+.sombra {
+  text-shadow: 0 0 2px rgb(80, 80, 255);
+}

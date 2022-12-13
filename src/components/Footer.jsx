@@ -34,10 +34,10 @@ const Footer = () => {
                         <p>Email: tienda.ajedrez@gmail.com</p>
                         <p>Córdoba 4030, Rosario, Santa Fe, Argentina</p>
                         <div>
-                            <a href={"/"} target={"_blank"} className="me-3" rel="noreferrer"><img src={"images/facebook.svg"} alt="Facebook" width={24} /></a>
-                            <a href={"/"} target={"_blank"} className="me-3" rel="noreferrer"><img src={"images/instagram.svg"} alt="Instagram" width={24} /></a>
-                            <a href={"/"} target={"_blank"} className="me-3" rel="noreferrer"><img src={"images/twitter.svg"} alt="Twitter" width={24} /></a>
-                            <a href={"/"} target={"_blank"} className="me-3" rel="noreferrer"><img src={"images/whatsapp.svg"} alt="WhatsApp" width={24} /></a>
+                            <a href={"/"} target={"_blank"} className="me-3" rel="noreferrer"><img src={"../images/facebook.svg"} alt="Facebook" width={24} /></a>
+                            <a href={"/"} target={"_blank"} className="me-3" rel="noreferrer"><img src={"../images/instagram.svg"} alt="Instagram" width={24} /></a>
+                            <a href={"/"} target={"_blank"} className="me-3" rel="noreferrer"><img src={"../images/twitter.svg"} alt="Twitter" width={24} /></a>
+                            <a href={"/"} target={"_blank"} className="me-3" rel="noreferrer"><img src={"../images/whatsapp.svg"} alt="WhatsApp" width={24} /></a>
                         </div>
                     </div>
                 </div>
