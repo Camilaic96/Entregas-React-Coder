@@ -37,7 +37,6 @@ const Contacto = () => {
                     </div>
                 </div>
             </div>
-            <hr />
         </div>
     )
 }
