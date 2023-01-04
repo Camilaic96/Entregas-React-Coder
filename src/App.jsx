@@ -10,27 +10,29 @@ import ComoComprar from "./components/pages/ComoComprar";
 import QuienesSomos from "./components/pages/QuienesSomos";
 import Contacto from "./components/pages/Contacto";
 import BotonSubir from "./components/BotonSubir";
+import CartContextProvider from "./components/context/CartContext";
 
 function App() {
   return (
-      <div>
-        <BrowserRouter>
-          <NavBar />
-          <Routes>
-            <Route path={"/"} element={<ItemListContainer />} />
-            <Route path={"/category/:id"} element={<ItemListContainer />} />
-            <Route path={"/item/:id"} element={<ItemDetailContainer />} />
-            <Route path={"/*"} element={<Error404 />} />
-          </Routes>
-          <Jumbotron />
-          <ComoComprar />
-          <QuienesSomos />
-          <Contacto />
-          <Footer />
-          <BotonSubir />
-        </BrowserRouter>
-
-      </div>
+    <CartContextProvider>
+          <div>
+            <BrowserRouter>
+              <NavBar />
+              <Routes>
+                <Route path={"/"} element={<ItemListContainer />} />
+                <Route path={"/category/:id"} element={<ItemListContainer />} />
+                <Route path={"/item/:id"} element={<ItemDetailContainer />} />
+                <Route path={"/*"} element={<Error404 />} />
+              </Routes>
+              <Jumbotron />
+              <ComoComprar />
+              <QuienesSomos />
+              <Contacto />
+              <Footer />
+              <BotonSubir />
+            </BrowserRouter>
+          </div>
+      </CartContextProvider>
   );
 }
 
