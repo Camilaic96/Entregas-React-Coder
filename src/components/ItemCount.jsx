@@ -5,36 +5,27 @@ const ItemCount = ({stockItems}) => {
     const [stock, setStock] = useState(stockItems);
     
     useEffect(()=>{
-       setStock(stockItems)
+        setStock(stockItems)
 
     },[stockItems])
-    //Funcion para incrementar contador
     const incrementarContador = () => {
-        //no dejamos que se ingresen mas del stock limite
         if(counter < stock){
             setCounter(counter + 1);
         }     
     }
 
-
-    //Funcion para decrementar contador
     const decrementarContador = () => {
-        //no dejamos que se ingresen nªs negativos
         if(counter > 1){
         setCounter(counter - 1);
         }
     }
 
-    //Funcion para agregar productos al carro y no sobrepasar el stock disponible
     const onAdd = () => {
         if((stock > 0) && (counter <= stock)){
-        console.log("Agregaste " + counter + " productos al carro")
         setStock(stock - counter);
-        //resteamos el contador
         setCounter(0);
         }
     }
-
 
     return(
         <div className="container">
