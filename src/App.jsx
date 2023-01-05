@@ -12,6 +12,7 @@ import Contacto from "./components/pages/Contacto";
 import BotonSubir from "./components/BotonSubir";
 import CartContextProvider from "./components/context/CartContext";
 import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                 <Route path={"/category/:id"} element={<ItemListContainer />} />
                 <Route path={"/item/:id"} element={<ItemDetailContainer />} />
                 <Route path={"/cart"} element={<Cart />} />
+                <Route path={"/checkout"} element={<Checkout />} />
                 <Route path={"*"} element={<Error404 />} />
               </Routes>
               <Jumbotron />
