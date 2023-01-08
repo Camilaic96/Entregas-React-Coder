@@ -4,14 +4,14 @@ import CartWidget from "./CartWidget";
 
 const NavBar = () => {
     return (
-        <div className="container">
+        <div className="container-fluid fixed-top bg-white shadow-sm">
             <div className="row">
-                <div className="col-md-8">
+                <div className="col-md-6 offset-2">
                     <nav className="navbar navbar-expand-lg">
                         <div className="container-fluid">
                             <Link className="navbar-brand d-flex flex-column align-items-center" to={"/"}>
-                                <img src={"../images/logoTiendaAjedrez.png"} alt={"Logo Tienda Ajedrez"} width={80} />
-                                <p><b><em>Tienda Ajedrez</em></b></p>
+                                <img src={"../images/logoTiendaAjedrez.png"} alt={"Logo Tienda Ajedrez"} width={64} />
+                                <p className="fs-6"><b><em>Tienda Ajedrez</em></b></p>
                             </Link>
                             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" > <span className="navbar-toggler-icon"></span> </button>
                             <div className="collapse navbar-collapse" id="navbarNavDropdown">
@@ -20,7 +20,7 @@ const NavBar = () => {
                                         <NavLink className="nav-link" aria-current="page" activeclassname="active" to={"/"}>Inicio</NavLink>
                                     </li>
                                     <li className="nav-item dropdown">
-                                        <NavLink className="nav-link dropdown-toggle" to={"/"} role="button" data-bs-toggle="dropdown" aria-expanded="false" activeclassname="active">Productos</NavLink>
+                                        <NavLink className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</NavLink>
                                         <ul className="dropdown-menu">
                                             <li>
                                                 <NavLink className="dropdown-item" to={"/category/tablero"}>Tableros</NavLink>
@@ -47,9 +47,7 @@ const NavBar = () => {
                         </div>
                     </nav>
                 </div>
-                <div className="col-md-4 d-flex align-items-center justify-content-end">
-                    <CartWidget />
-                </div>
+                <div className="col-md-2 d-flex align-items-center justify-content-end"><CartWidget /></div>
             </div>
         </div>
 

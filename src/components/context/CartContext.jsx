@@ -29,11 +29,11 @@ const CartContextProvider = ({children}) => {
     }
 
     const cartTotal = () => {
-        return cart.reduce((total, item) => total += item.quantity, 0)
+        return cart.reduce((total, item) => total += item.quantity, 0);
     }
 
     const sumTotal = () => {
-        return cart.reduce((total, item) => total += item.quantity * item.price, 0)
+        return cart.reduce((total, item) => total += item.quantity * item.price, 0);
     }
 
     return (

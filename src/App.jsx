@@ -6,13 +6,15 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import Error404 from "./components/Error404";
 import Jumbotron from "./components/Jumbotron";
 import Footer from "./components/Footer";
-import ComoComprar from "./components/pages/ComoComprar";
-import QuienesSomos from "./components/pages/QuienesSomos";
-import Contacto from "./components/pages/Contacto";
+import ComoComprar from "./components/ComoComprar";
+import QuienesSomos from "./components/QuienesSomos";
+import Contacto from "./components/Contacto";
 import BotonSubir from "./components/BotonSubir";
 import CartContextProvider from "./components/context/CartContext";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
+import ThankYou from "./components/ThankYou";
+import Loading from "./components/Loading";
 
 function App() {
   return (
@@ -26,12 +28,14 @@ function App() {
                 <Route path={"/item/:id"} element={<ItemDetailContainer />} />
                 <Route path={"/cart"} element={<Cart />} />
                 <Route path={"/checkout"} element={<Checkout />} />
+                <Route path={"/thankyou/:id"} element={<ThankYou />} />
                 <Route path={"*"} element={<Error404 />} />
               </Routes>
               <Jumbotron />
               <ComoComprar />
               <QuienesSomos />
               <Contacto />
+              <Loading />
               <Footer />
               <BotonSubir />
             </BrowserRouter>
