@@ -9,7 +9,6 @@ import Footer from "./components/Footer";
 import ComoComprar from "./components/ComoComprar";
 import QuienesSomos from "./components/QuienesSomos";
 import Contacto from "./components/Contacto";
-import BotonSubir from "./components/BotonSubir";
 import CartContextProvider from "./components/context/CartContext";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
@@ -37,7 +36,6 @@ function App() {
               </Routes>
               <Jumbotron />
               <Footer />
-              <BotonSubir />
             </BrowserRouter>
           </div>
       </CartContextProvider>
