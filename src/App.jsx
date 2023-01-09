@@ -14,7 +14,7 @@ import CartContextProvider from "./components/context/CartContext";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import ThankYou from "./components/ThankYou";
-import Loading from "./components/Loading";
+import MensajeEnviado from "./components/MensajeEnviado";
 
 function App() {
   return (
@@ -29,13 +29,13 @@ function App() {
                 <Route path={"/cart"} element={<Cart />} />
                 <Route path={"/checkout"} element={<Checkout />} />
                 <Route path={"/thankyou/:id"} element={<ThankYou />} />
+                <Route path={"/mensaje-enviado"} element={<MensajeEnviado />} />
+                <Route path={"/como-comprar"} element={<ComoComprar />} />
+                <Route path={"/quienes-somos"} element={<QuienesSomos />} />
+                <Route path={"/contacto"} element={<Contacto />} />
                 <Route path={"*"} element={<Error404 />} />
               </Routes>
               <Jumbotron />
-              <ComoComprar />
-              <QuienesSomos />
-              <Contacto />
-              <Loading />
               <Footer />
               <BotonSubir />
             </BrowserRouter>

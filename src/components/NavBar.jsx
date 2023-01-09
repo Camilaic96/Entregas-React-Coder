@@ -34,13 +34,13 @@ const NavBar = () => {
                                         </ul>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#como-comprar" activeclassname="active">Cómo comprar</a>
+                                        <NavLink className="nav-link" aria-current="page" activeclassname="active" to={"/como-comprar"}>Cómo comprar</NavLink>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#quienes-somos" activeclassname="active">Quiénes somos</a>
+                                        <NavLink className="nav-link" aria-current="page" activeclassname="active" to={"/quienes-somos"}>Quiénes somos</NavLink>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#contacto" activeclassname="active">Contacto</a>
+                                        <NavLink className="nav-link" aria-current="page" activeclassname="active" to={"/contacto"}>Contacto</NavLink>
                                     </li>
                                 </ul>
                             </div>

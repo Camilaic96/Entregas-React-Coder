@@ -6,7 +6,7 @@ const Jumbotron = () => {
             <div className="row fondoAzul">
                 <p className="p-5 fs-1">Elige, paga y recibe tu pedido sin moverte de tu casa</p>
             </div>
-            <div className="row fondoGris">
+            <div className="row">
                 <div className="col-md-4 p-3">
                     <p className="text-uppercase fs-5 fw-semibold">Enviamos tu compra</p>
                     <p>Entregas a todo el país</p>

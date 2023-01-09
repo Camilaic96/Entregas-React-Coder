@@ -24,7 +24,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="row fondoAzul p-1">
-                <p>COPYRIGHT TIENDA AJEDREZ - 2022. TODOS LOS DERECHOS RESERVADOS.</p>
+                <p>COPYRIGHT @ TIENDA AJEDREZ - 2022. TODOS LOS DERECHOS RESERVADOS.</p>
             </div>
         </div>
     )

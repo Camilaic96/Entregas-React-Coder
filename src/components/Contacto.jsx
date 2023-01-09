@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { Navigate } from "react-router-dom";
 
 const Contacto = () => {
     const [nombre, setNombre] = useState("");
@@ -7,6 +8,7 @@ const Contacto = () => {
     const [telefono, setTelefono] = useState("");
     const [consulta, setConsulta] = useState("");
     const [contactId, setContactId] = useState("");
+    const [mensaje, setMensaje] = useState(false);
 
     const validarForm = (nombre, email, telefono, consulta) => {
         let validEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
@@ -15,6 +17,7 @@ const Contacto = () => {
     }
 
     const generarContacto = () => {
+        setMensaje(true);
         if (validarForm(nombre, email, telefono, consulta)) {
             const fecha = new Date();
             const contact = {
@@ -27,16 +30,14 @@ const Contacto = () => {
             const db = getFirestore();
             const contactsCollection = collection(db, "contacts");
             addDoc(contactsCollection, contact).then((snapShot) => {
-                setContactId(snapShot.id)
+                setContactId(snapShot.id);
             });
-        } else {
-            console.log("Faltan datos")
-        }  
+        }
     };
 
     return (
         <div className="container-fluid my-5 mb-5 mt-5 pt-5" id="contacto">
-            <div className="row col-md-6 offset-3 mb-4 text-center mt-5 pt-5">
+            <div className="row col-md-6 offset-3 mb-4 mt-5 pt-5">
                 <h2 className="sombra">Contacto</h2>
             </div>
             <div className="row d-flex align-items-center">
@@ -68,13 +69,11 @@ const Contacto = () => {
                         <label htmlFor="exampleFormControlTextarea1" className="form-label">Mensaje</label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" onInput={(e) => { setConsulta(e.target.value) }} required />
                     </div>
-                    <button type="button" className="btn botones" onClick={generarContacto} >Enviar consulta</button>
+                    <div className="d-flex">
+                        <button type="button" className="btn btn-secondary botones fs-6 me-3" onClick={generarContacto} >Enviar consulta</button>
+                        {mensaje ? (contactId ? <Navigate to={"/mensaje- enviado"} /> : <div className="fs-6 ms-3 text-danger pt-2">Completar todos los campos</div>) : "" }
+                    </div>
                 </form>
-            </div>
-            <div className="row my-5">
-                <div className="col text-center">
-                    {contactId ? "Su mensaje ha sido enviado con éxito" : "Faltan datos"}
-                </div>
             </div>
         </div>
     )
