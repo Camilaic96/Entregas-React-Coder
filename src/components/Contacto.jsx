@@ -37,7 +37,7 @@ const Contacto = () => {
 
     return (
         <div className="container-fluid my-5 mb-5 mt-5 pt-5" id="contacto">
-            <div className="row col-md-6 offset-3 mb-4 mt-5 pt-5">
+            <div className="row col-md-6 offset-3 mb-4 mt-5">
                 <h2 className="sombra">Contacto</h2>
             </div>
             <div className="row d-flex align-items-center">

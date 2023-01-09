@@ -3,7 +3,7 @@ import React from "react";
 const ComoComprar = () => {
     return(
         <div className="container-fluid my-5 mb-5 mt-5 pt-5" id="como-comprar">
-            <div className="row col-md-6 offset-3 mb-4 mt-5 pt-5">
+            <div className="row col-md-6 offset-3 mb-4 mt-5">
                 <h2 className="sombra">Cómo comprar</h2>
             </div>
             <div className="row">
@@ -17,9 +17,6 @@ const ComoComprar = () => {
                         <li>Cualquier duda podés comunicarte por whatsApp o teléfono al 34111223344 o al correo tienda.ajedrez@gmail.com</li>
                     </ol>
                 </div>
-            </div>
-            <div className="row">
-                <hr className="col-md-6 offset-3 mt-5" />
             </div>
         </div>
     )
