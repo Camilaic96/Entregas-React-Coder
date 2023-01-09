@@ -71,7 +71,7 @@ const Contacto = () => {
                     </div>
                     <div className="d-flex">
                         <button type="button" className="btn btn-secondary botones fs-6 me-3" onClick={generarContacto} >Enviar consulta</button>
-                        {mensaje ? (contactId ? <Navigate to={"/mensaje- enviado"} /> : <div className="fs-6 ms-3 text-danger pt-2">Completar todos los campos</div>) : "" }
+                        {mensaje ? (contactId ? <Navigate to={"/mensaje-enviado"} /> : <div className="fs-6 ms-3 text-danger pt-2">Completar todos los campos</div>) : "" }
                     </div>
                 </form>
             </div>
